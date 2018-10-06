@@ -2,7 +2,7 @@
 
 body {
   box-sizing: border-box;
-  font: 1em Hind, sans-serif;
+  font: 20px Hind, sans-serif;
   color: #F8F5F4; /* red-snow */
 }
 
@@ -16,7 +16,7 @@ section {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 a {
@@ -79,6 +79,7 @@ a {
 /* ----------- NAV BAR START ----------- */
 
 .nav-bar {
+  font-size: .8em;
   text-transform: uppercase;
   background-color: #682C06; /* dark-red */
   position: fixed;
@@ -105,6 +106,10 @@ a {
   text-decoration: none;
   height: 100%;
   color: #F8F5F4; /* red-snow */
+}
+
+.active-navbar {
+  border-bottom: 5px solid #BD5454; /* coral-red */
 }
 
 .active {
@@ -142,7 +147,7 @@ a {
 
 /* ----------- SECTION INTRO START ----------- */
 .intro-title {
-  font-size: 1.5em;
+  font-size: 1.2em;
   padding: 0;
 	margin: 0;
 }
@@ -183,28 +188,48 @@ a {
 
 .card {
   margin: 0 1vw;
-  padding: 0 2vw;
+  padding-bottom: 2vw;
   width: 50%;
   background-color: #F8F5F4; /* red-snow */
   border-radius: 10px;
 }
 
-.card-img  {
-  text-align: center;
+.card-headings {
+  margin: 1em 0;
 }
 
-.card-img img, .hobbies-item img, .toolbox-item img {
+.card-headings, .card p{
+  padding: 0 2vw;
+}
+
+.card-headings * {
+  margin: 0;
+  padding: 0;
+}
+
+.card-img img {
+  text-align: center;
+  border-radius: 10px 10px 0 0;
   width: 100%;
   height: auto;
 }
 
-.toolbox-content,.hobbies-content  {
+.toolbox {
+  margin-top: 3em;
+}
+
+.toolbox-item img {
+  max-height: 75px;
+  width: auto;
+}
+
+.toolbox-content  {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.toolbox-list, .hobbies-list {
+.toolbox-list {
   margin: 0;
   padding: 0 0 3vh 0;
   list-style-type: none;
@@ -214,9 +239,17 @@ a {
   align-items: center;
 }
 
-.toolbox-item,.hobbies-item {
-	margin: 1vw;
+.toolbox-item {
+	margin: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.toolbox-icon-footer {
+  margin: 1em;
+}
+
 
 
 /* ----------- SECTION KNOW ME START ----------- */
@@ -224,6 +257,17 @@ a {
   background-color: #01130F; /* black-ocean */
 }
 
+.about-me {
+  display: flex;
+  align-items: center;
+}
+
+.about-me-pic {
+  width: auto;
+  max-height: 30vh;
+  border-radius: 50%;
+  margin-left: 2em;
+}
 
 
 /* ----------- SECTION ABOUT ME START ----------- */
@@ -245,13 +289,14 @@ a {
   background-color: #F8F5F4; /* red-snow */
   border-radius: 5px;
   color:  #402C1E; /* brown-sand */
-  padding: 2vw;
-  margin: 1vw;
+  padding: 2em;
+  margin: 4vh;
 }
 
 .testimonials-header {
   display: flex;
   flex-direction: row;
+  margin-bottom: 2em;
 }
 
 .testimonials-header h2 {
@@ -265,10 +310,10 @@ a {
   padding: 5px 15px;
 }
 
-blockquote {
+.opinions {
  border-left: 4px solid #BD5454; /* coral-red */
- padding-left: 1vw;
- margin: 1vw;
+ padding-left: 1em;
+ margin: 1em;
 }
 
 
@@ -326,9 +371,13 @@ footer p {
 /* ----------- MEDIA QUERIES START ----------- */
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 576px) and (max-width: 820px) {
+@media (min-width: 576px) and (max-width: 815px) {
+  body {
+    font-size: 18px;
+  }
+
   h1{
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
 	section {
@@ -346,40 +395,63 @@ footer p {
 	}
 
   .nav-list {
-    font-size: .7em;
+    font-size: .75em;
   }
 
   .aside-bar {
     right: .1vw;
   }
 
-	.cards {
+	.cards, .about-me {
 		display: flex;
 		flex-wrap: wrap;
+    flex-direction: column;
 	}
 
 	.card {
-		margin: 1vh 0;
+		margin: 1em 0;
 		width: 100%;
-	  padding: 1vw 3vw;
+    padding-bottom: 1.2em;
 	}
 
-	.toolbox-list, .hobbies-list {
+  .card-headings, .card p{
+    padding: 0 2em;
+  }
+
+  .about-me-pic-content {
+    order: -1;
+    align-self: center;
+  }
+
+	.toolbox-list {
 		padding: 0;
 	}
 
-	.toolbox-content, .hobbies-content {
+	.toolbox-content {
 	  display: flex;
 		flex-wrap: wrap;
 		padding-bottom: 3vh;
 	}
+
+  .toolbox-item {
+  	margin: .5em;
+  }
+
+  .toolbox-item img {
+    max-height: 40px;
+    width: auto;
+  }
 }
 
 
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+
   h1{
-    font-size: 2em;
+    font-size: 2rem;
   }
 
 	section {
@@ -403,6 +475,7 @@ footer p {
 
   .nav-item, .aside-bar-item {
 	  display: none;
+    font-size: 1rem;
   }
 
   .menuicon {
@@ -410,24 +483,47 @@ footer p {
 		visibility: visible;
   }
 
-	.cards, .toolbox {
+	.cards, .toolbox, .about-me {
 		display: flex;
 		flex-wrap: wrap;
+    flex-direction: column;
 	}
 
 	.card {
-		margin: 1vh 0;
+		margin: 1em 0;
 		width: 100%;
-	  padding: 0 5vw;
+    padding-bottom: 1.5em;
 	}
 
-	.toolbox-list, .hobbies-list {
+  .card-headings, .card p{
+    padding: 0 5vw;
+  }
+
+  .about-me-pic-content {
+    order: -1;
+    align-self: center;
+  }
+
+	.toolbox-list {
 		padding: 0;
 	}
 
-	.toolbox-content, .hobbies-content {
+  .toolbox-item {
+  	margin: .5em;
+  }
+
+  .toolbox-item img {
+    max-height: 50px;
+    width: auto;
+  }
+
+	.toolbox-content {
 	  display: flex;
 	  flex-wrap: wrap;
 	  padding-bottom: 3vh;
 	}
+
+  .opinions {
+    margin: 0;
+  }
 }
