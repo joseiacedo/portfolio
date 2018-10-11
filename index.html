@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:400,700">
   <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/life.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="scripts/scripts.js"></script>
 </head>
 
 <body>
@@ -17,53 +20,44 @@
   <header>
     <nav class="nav-bar">
       <ul class="nav-list">
-        <li class="nav-item active-navbar"><a href="#">
-            <div>Home</div>
-          </a></li>
-        <li class="nav-item"><a href="#work">
+        <li class="nav-item">
+          <a href="#home">
+            <div class="activenav">Home</div>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#work">
             <div>My work</div>
-          </a></li>
-        <li class="nav-item"><a href="#about">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about">
             <div>Know me</div>
-          </a></li>
-        <li class="nav-item"><a href="#process">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#process">
             <div>Design process</div>
-          </a></li>
-        <li class="nav-item"><a href="#contact">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact">
             <div>Contact</div>
-          </a></li>
-        <li class="nav-item menuicon"><a href="#">
+          </a>
+        </li>
+        <li class="nav-item menuicon">
+          <a href="">
             <div><i class="fas fa-bars"></i></div>
-          </a></li>
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <!-- aside -->
-  <aside class="aside-bar">
-    <ul class="aside-bar-list">
-      <li class="aside-bar-item"><a href="#">
-          <div class="active radius"></div>
-        </a></li>
-      <li class="aside-bar-item"><a href="#work">
-          <div></div>
-        </a></li>
-      <li class="aside-bar-item"><a href="#about">
-          <div></div>
-        </a></li>
-      <li class="aside-bar-item"><a href="#process">
-          <div></div>
-        </a></li>
-      <li class="aside-bar-item"><a href="#contact">
-          <div></div>
-        </a></li>
-    </ul>
-  </aside>
-
   <!-- main -->
   <main>
     <!-- INTRO -->
-    <section class="section-intro">
+    <section id="home" class="section-intro">
       <div class="section-main">
         <p class="intro-title">I am <strong>Jose I. Acedo</strong>, mighty <strong>product designer</strong>.</p>
         <p class="intro-title">Welcome to my little island where we're always...</p>
@@ -78,6 +72,36 @@
         <button type="button" class="btn primary">Ready for the dive!</button>
       </div>
     </section>
+
+    <!-- ANIMATIONS -->
+    <div class="animations">
+      <div class="light"></div>
+      <div class="island">
+        <div class="island2">
+          <img src="images/tree.svg" alt="" class="tree tree1">
+          <img src="images/tree-shadow.svg" alt="" class="tree tree1shadow">
+          <img src="images/trunk.svg" alt="" class="tree tree1trunk">
+          <img src="images/trunk-shadow.svg" alt="" class="tree tree1trunkshadow">
+          <img src="images/tree.svg" alt="" class="tree tree2">
+          <img src="images/tree-shadow.svg" alt="" class="tree tree2shadow">
+          <img src="images/trunk.svg" alt="" class="tree tree2trunk">
+          <img src="images/trunk-shadow.svg" alt="" class="tree tree2trunkshadow">
+          <img src="images/tree.svg" alt="" class="tree tree3">
+          <img src="images/tree-shadow.svg" alt="" class="tree tree3shadow">
+          <img src="images/trunk.svg" alt="" class="tree tree3trunk">
+          <img src="images/trunk-shadow.svg" alt="" class="tree tree3trunkshadow">
+          <img src="images/tree.svg" alt="" class="tree tree4">
+          <img src="images/tree-shadow.svg" alt="" class="tree tree4shadow">
+          <img src="images/trunk.svg" alt="" class="tree tree4trunk">
+          <img src="images/trunk-shadow.svg" alt="" class="tree tree4trunkshadow">
+        </div>
+      </div>
+      <div class="waves">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+      </div>
+    </div>
 
     <!-- MY WORK -->
     <section id="work" class="section-work">
@@ -158,10 +182,17 @@
       <div class="section-footer">
         <button class="btn primary">Go deeper</button>
       </div>
+      <div class="bubbles">
+        <li class="bubble"></li>
+        <li class="bubble"></li>
+        <li class="bubble"></li>
+        <li class="bubble"></li>
+        <li class="bubble"></li>
+      </div>
     </section>
 
     <!-- KNOW ME -->
-    <section class="section-me">
+    <section id="about" class="section-me">
       <div class="section-header">
         <h1>Know me</h1>
       </div>
@@ -206,7 +237,7 @@
     </section>
 
     <!-- MY DESIGN PROCESS -->
-    <section class="section-process">
+    <section id="process" class="section-process">
       <div class="section-header">
         <h1>My design process</h1>
       </div>
@@ -221,7 +252,7 @@
 
 
     <!-- CONTACT -->
-    <section class="section-contact">
+    <section id="contact" class="section-contact">
       <div class="section-header">
         <h1>Contact me</h1>
       </div>

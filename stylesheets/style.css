@@ -2,7 +2,7 @@
 
 body {
   box-sizing: border-box;
-  font: 20px Hind, sans-serif;
+  font: 18px Hind, sans-serif;
   color: #F8F5F4; /* red-snow */
 }
 
@@ -11,8 +11,8 @@ p {
 }
 
 section {
-  padding: 5vw;
-	min-height: 80vh;
+  padding: 10vh 10vw;
+	min-height: 75vh;
 }
 
 h1 {
@@ -54,38 +54,17 @@ a {
 }
 
 
-
-/* ----------- ASIDE BAR START ----------- */
-.aside-bar {
-  position: fixed;
-  right: 1vw ;
-  top: 50vh;
-}
-
-.aside-bar-list {
-  list-style-type: none;
-}
-
-.aside-bar-item div {
-  opacity: .8;
-  margin: .7em;
-  background-color: #F8F5F4; /* red-snow */
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-}
-
-
 /* ----------- NAV BAR START ----------- */
 
 .nav-bar {
-  font-size: .8em;
+  font-size: 1rem;
   text-transform: uppercase;
   background-color: #682C06; /* dark-red */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
 .nav-list {
@@ -108,7 +87,7 @@ a {
   color: #F8F5F4; /* red-snow */
 }
 
-.active-navbar {
+.activenav {
   border-bottom: 5px solid #BD5454; /* coral-red */
 }
 
@@ -118,10 +97,6 @@ a {
 
 .active:hover {
   background-color: #F8F5F4 !important; /* red-snow */
-}
-
-.radius {
-	border: 1px #F8F5F4 solid; /* red-snow */
 }
 
 .nav-item:hover {
@@ -158,6 +133,7 @@ a {
 }
 
 .section-intro {
+  position: relative;
   background: #124f41; /* night-green - Old browsers */
   background: -moz-radial-gradient(center, ellipse cover, #124f41 0%, #062c1f 100%); /* FF3.6-15 */
   background: -webkit-radial-gradient(center, ellipse cover, #124f41 0%,#062c1f 100%); /* Chrome10-25,Safari5.1-6 */
@@ -167,12 +143,14 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: -10;
 }
-
 
 
 /* ----------- SECTION MY WORK START ----------- */
 .section-work {
+  position: relative;
+  z-index: -2;
   background: #2d4155; /* deep-blue-sea - Old browsers */
   background: -moz-linear-gradient(top, #2d4155 0%, #0a1b2e 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #2d4155 0%,#0a1b2e 100%); /* Chrome10-25,Safari5.1-6 */
@@ -219,8 +197,12 @@ a {
 }
 
 .toolbox-item img {
-  max-height: 75px;
+  max-height: 70px;
   width: auto;
+}
+
+.toolbox-item small {
+  font-size: .8rem;
 }
 
 .toolbox-content  {
@@ -373,20 +355,20 @@ footer p {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 576px) and (max-width: 815px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   h1{
-    font-size: 2em;
+    font-size: 1.7rem;
   }
 
 	section {
-		min-height: 85vh;
+		min-height: 80vh;
 		padding: 7vw;
 	}
 
   .intro-title {
-    font-size: 1.2em;
+    font-size: 1rem;
     padding: 0;
   }
 
@@ -395,11 +377,7 @@ footer p {
 	}
 
   .nav-list {
-    font-size: .75em;
-  }
-
-  .aside-bar {
-    right: .1vw;
+    font-size: .7rem;
   }
 
 	.cards, .about-me {
@@ -445,7 +423,7 @@ footer p {
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
+@media (max-width: 576px){
   body {
     font-size: 16px;
   }
@@ -473,7 +451,7 @@ footer p {
     text-align: center;
   }
 
-  .nav-item, .aside-bar-item {
+  .nav-item {
 	  display: none;
     font-size: 1rem;
   }

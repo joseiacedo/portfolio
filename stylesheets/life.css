@@ -1,0 +1,208 @@
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (min-height: 420px) {
+  .island,.island2 {
+    height: 60vh;
+    width: 50vw;
+    background-color: #C4C4A7;
+    position: absolute;
+    bottom: -42vh;
+    left: 15vw;
+    border-radius: 50%;
+    z-index: -5;
+  }
+
+  .island2 {
+    background-color: #D1D3BD;
+    width: 48vw;
+    bottom:0;
+    left: 2vw;
+  }
+
+  .tree {
+    position: absolute;
+  }
+
+  .tree1 {
+    top: -10px;
+    left: 100px;
+  }
+
+  .tree1shadow {
+    top: -10px;
+    left: 123px;
+  }
+
+  .tree1trunk {
+    top: 59px;
+    left: 118px;
+  }
+
+  .tree1trunkshadow {
+    top: 59px;
+    left: 123px;
+  }
+
+  .tree2{
+    top: -40px;
+    left: 200px;
+  }
+
+  .tree2shadow {
+    top: -40px;
+    left: 223px;
+  }
+
+  .tree2trunk {
+    top: 29px;
+    left: 218px;
+  }
+
+  .tree2trunkshadow {
+    top: 29px;
+    left: 223px;
+  }
+
+  .tree3{
+    top: -30px;
+    left: 320px;
+  }
+
+  .tree3shadow {
+    top: -30px;
+    left: 343px;
+  }
+
+  .tree3trunk {
+    top: 39px;
+    left: 338px;
+  }
+
+  .tree3trunkshadow {
+    top: 39px;
+    left: 343px;
+  }
+
+  .tree4{
+    top: -10px;
+    left: 390px;
+  }
+
+  .tree4shadow {
+    top: -10px;
+    left: 413px;
+  }
+
+  .tree4trunk {
+    top: 59px;
+    left: 408px;
+  }
+
+  .tree4trunkshadow {
+    top: 59px;
+    left: 413px;
+  }
+
+  .wave {
+    opacity: .4;
+    position: absolute;
+    bottom: 0;
+    background: #2d4155; /* deep-blue-sea -*/
+    width: 100%;
+    height: 4vh;
+    animation: oceanwaves 3000ms infinite alternate;
+    z-index: -4;
+  }
+
+  .wave3 {
+    animation: oceanwaves 4000ms infinite alternate;
+  }
+
+  .wave2 {
+    animation: oceanwaves 5000ms infinite alternate;
+    opacity: .2;
+  }
+
+  @keyframes oceanwaves {
+    from {bottom: 1vh;}
+    to {bottom: 3vh;}
+  }
+
+  .light {
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    top: 15vh;
+    right: 15vw;
+    border-radius: 50%;
+    z-index: -5;
+    opacity: .7;
+    background: -moz-linear-gradient(top, rgba(234,234,234,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(234,234,234,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(234,234,234,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+  }
+
+  .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transform: translateZ(0);
+    z-index: -2;
+  }
+
+  .bubbles li {
+    border-radius: 50%;
+    position: absolute;
+    list-style: none;
+    background-color: rgba(255,255,255,0.15);
+    bottom: -100px;
+    animation: bubbles 15s linear infinite;
+  }
+
+  .bubbles li:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 20%;
+  }
+
+  .bubbles li:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    left: 40%;
+    animation-delay: 2s;
+    animation-duration: 17s;
+  }
+
+  .bubbles li:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 60%;
+    animation-delay: 4s;
+    animation-duration: 13s;
+  }
+
+  .bubbles li:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-delay: 1s;
+    animation-duration: 22s;
+  }
+
+  .bubbles li:nth-child(5) {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    animation-delay: 7s;
+    animation-duration: 12s;
+  }
+
+  @keyframes bubbles {
+    from {bottom: -100px;}
+    to {bottom: 95%;}
+  }
+}
